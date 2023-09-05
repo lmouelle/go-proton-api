@@ -3,9 +3,9 @@ package server
 import (
 	"net/http"
 
-	"github.com/ProtonMail/go-proton-api"
-	"github.com/ProtonMail/go-proton-api/server/backend"
 	"github.com/gin-gonic/gin"
+	"github.com/henrybear327/go-proton-api"
+	"github.com/henrybear327/go-proton-api/server/backend"
 )
 
 func (s *Server) handleGetContacts() gin.HandlerFunc {

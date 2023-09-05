@@ -22,6 +22,8 @@ const (
 	SuccessCode               Code = 1000
 	MultiCode                 Code = 1001
 	InvalidValue              Code = 2001
+	AFileOrFolderNameExist    Code = 2500
+	ADraftExist               Code = 2500
 	AppVersionMissingCode     Code = 5001
 	AppVersionBadCode         Code = 5003
 	UsernameInvalid           Code = 6003 // Deprecated, but still used.
@@ -31,7 +33,11 @@ const (
 	AuthRefreshTokenInvalid   Code = 10013
 )
 
-type ErrDetails []byte
+var (
+	ErrFileNameExist   = errors.New("a file with that name already exists (Code=2500, Status=422)")
+	ErrFolderNameExist = errors.New("a folder with that name already exists (Code=2500, Status=422)")
+	ErrADraftExist     = errors.New("draft already exists on this revision (Code=2500, Status=409)")
+)
 
 // APIError represents an error returned by the API.
 type APIError struct {
