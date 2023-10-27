@@ -6,7 +6,6 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/ProtonMail/go-proton-api/server/backend"
 	"net/http"
 	"net/mail"
 	"net/url"
@@ -16,6 +15,8 @@ import (
 	"sync/atomic"
 	"testing"
 	"time"
+
+	"github.com/henrybear327/go-proton-api/server/backend"
 
 	"github.com/bradenaw/juniper/parallel"
 

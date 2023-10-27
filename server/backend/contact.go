@@ -1,9 +1,9 @@
 package backend
 
 import (
-	"github.com/ProtonMail/go-proton-api"
 	"github.com/ProtonMail/gopenpgp/v2/crypto"
 	"github.com/emersion/go-vcard"
+	"github.com/henrybear327/go-proton-api"
 )
 
 func ContactCardToContact(card *proton.Card, contactID string, kr *crypto.KeyRing) (proton.Contact, error) {
